@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title  >Document</title>
+    <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<BR>
+<BR>
+<h1 id="title"> Forms</h1>
+<p id="description">
+    The form should contain the following field.</p> 
+    <ul>
+        <li>First name, last name, address, pincode, gender, choice of food(must choose at least 2 out of 5 options), state, country.</li>
+        <li>Onsubmit of the form values the values must be appended to the table.</li>
+        <li>The columns of the table must contain First name, last name, address, pincode, gender, food, state, country. </li>
+        <li> Clear the form fields after updating the record to table.</li>
+    </ul>
+    
+    
+    <form target="_self"  onsubmit="event.preventDefault(); display();" id="form" name="form1" class="form-container">
+       
+         
+            <div class="form-group">    
+                <div class="row justify-content-sm-center">
+                    
+                    <div class="col-5"> 
+                        <label for="fname" class="required">First name</label><br/>
+                        <input type="text" id="first-name" name="fname" required placeholder="Enter First Name" value=""><br/>
+                        <div id="fname-err"></div>
+                    </div>
+
+                    <div class="col-5">
+                        <label for="lname" class="required">Last name</label><br/>
+                        <input type="text" id="last-name" name="lname"required placeholder="Enter Last Name">
+                        <div id="lname-err"></div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row justify-content-sm-center">
+                    <div class="col-5"> 
+                        <p class="required">Gender</p>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="flexRadioDefault1" name="gender" value="Male" required>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                            Male
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id="flexRadioDefault2" name="gender" value="Female">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Female
+                            </label>
+                          </div>
+
+                    </div>
+    
+                    <div class="col-5"> 
+                        <label for="address" class="required">Address</label><br/>
+                        <textarea id="address" placeholder="Enter Address" required ></textarea> 
+                    </div>
+                    <div id="gender-err"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row justify-content-sm-center">
+                        <div class="col-5"> 
+                            <label for="state" class="required">State</label><br/>
+                            <input type="text" id="state" name="state" required placeholder="Enter State"><br/>
+                            <div id="state-err"></div>
+                        </div>
+                    
+                        <div class="col-5"> 
+                            <label for="country">Country</label><br/>
+                            <input type="text" id="country" name="country"  placeholder="Enter Country">
+                        
+                        </div>
+                 </div>
+             </div>
+        <div class="form-group">
+            <div class="row justify-content-sm-center">
+                <div class="col-5"> 
+                    <label for="pin" class="required">Pin Code</label><br/>
+                    <input type="text" id="pincode" name="pin" required placeholder="Enter Pincode"><br/>
+                    <div id="pin-err"></div>
+                </div>
+            
+   
+            <div class="col-5">   
+                <p> Choice of food </p>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Indian" id="flexCheckDefault" name="food">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Indian
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Chinese" id="flexCheckChecked"  name="food">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Chinese
+                    </label>
+                </div>
+                <div>
+                    <input class="form-check-input" type="checkbox" value="Continetal" id="flexCheckDefault" name="food">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Continetal
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Asian" id="flexCheckChecked" name="food">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Asian
+                    </label>
+                </div>
+                <div>
+                    <input class="form-check-input" type="checkbox" value="Burma" id="flexCheckDefault" name="food">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Burma
+                    </label>
+                  </div>
+                 
+            </div>
+        </div>
+    </div>
+       
+    <input type="submit" id="submit" class="btn btn-primary""/ >
+    </form>
+
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js" id="form"></script>
+
+    
+</body>
+</html>
